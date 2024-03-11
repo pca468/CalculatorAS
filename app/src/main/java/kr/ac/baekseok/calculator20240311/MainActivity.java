@@ -14,11 +14,15 @@ public class MainActivity extends AppCompatActivity {
         Button btnAdd;
 
         Button btnMinus;
+        Button btnDiv;
+        Button btnMiltiple;
         TextView textResult;
         // 클래스 사용에러위치에서 alt+enter 자동으로 클래스 추가
 
         String num1, num2; // 임시변수 a,b
         Integer sum;
+        Double DivResult;
+        String DivResult2; // String.format("%.1f", DivResult); 실수형 출력형식 지정문자
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         // 시나이로 버튼을 누르면 입력란 1,2에 입력한 숫자를 연산하는 클릭이벤트를 설정
         //숫자는 사용자가 입력했다고 보고 클릭이벤트 버튼에 설정
         btnMinus=(Button)findViewById(R.id.Minus);
+        btnDiv=(Button)findViewById(R.id.Div);
+        btnMiltiple=(Button)findViewById(R.id.Multiple);
+
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,7 +62,31 @@ public class MainActivity extends AppCompatActivity {
                 sum = Integer.parseInt(num1) - Integer.parseInt(num2);
                 textResult.setText("계산결과: " + sum.toString());
             }
+        }); // btnMinus
+
+        btnDiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                num1 = edtNum1.getText().toString();
+                num2 = edtNum2.getText().toString();
+                DivResult = Double.parseDouble(num1) / Double.parseDouble(num2);
+                DivResult2 = String.format("%.1f",DivResult);
+                textResult.setText("계산결과: " +DivResult2);
+            }
+        }); // btnDiv
+        // 실수형은 어떻게 할 것인가?
+
+        btnMiltiple.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                num1 = edtNum1.getText().toString();
+                num2 = edtNum2.getText().toString();
+                sum = Integer.parseInt(num1) * Integer.parseInt(num2);
+                textResult.setText("계산결과 : " + sum.toString());
+
+            }
         });
+
 
     }// oncreate()
 }// MainActivity

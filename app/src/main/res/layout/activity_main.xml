@@ -55,4 +55,20 @@
         android:text="뺴기"
         android:textSize="30sp"
         />
+    <Button
+        android:id="@+id/Div"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="나누기"
+        android:textSize="30sp"
+
+        />
+    <Button
+        android:id="@+id/Multiple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="곱하기"
+        android:textSize="30sp"
+
+        />
 </LinearLayout>
