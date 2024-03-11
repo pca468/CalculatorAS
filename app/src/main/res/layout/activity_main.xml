@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edtNum1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:hint="숫자1을 입력하세요."
+        />
+    <!-- wrap_content는 한줄 크기 만큼(원래는 컨텐츠 크기 만큼 잡음)
+        sp단위는 확대 축소해도 손상되지 않는 특성을 갖는 픽셀단위
+        글자는 항상 sp가 권장사항(아니면 경고 뜬다.)
+        힌트는 커서가 위치되면 사라지는 안내글-->
+    <EditText
+        android:id="@+id/edtNum2"
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:hint="슷자2를 입력하세요."
+        android:textSize="30sp"
+
+        />
+    <!--
+ xml 위젯의 디자인배치, 글자설정, 색상...
+ 주석 : (설명) EditText 입력란임 (숫자.문자입력, 특수문자입력)
+     텍스트뷰(TextView) xml은 대소문자를 구분한다.
+ -->
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="계산결과 : "
+        android:textSize="30sp"
+        />
+    <!-- 더하기버튼 -->
+    <Button
+        android:id="@+id/Add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="더하기"
+        android:textSize="30sp"
+        />
+
+    <Button
+        android:id="@+id/Minus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="뺴기"
+        android:textSize="30sp"
+        />
+</LinearLayout>
